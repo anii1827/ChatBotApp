@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="side-panel" id="side-panel">
+            <h2>Active Users</h2>
+            <div class="onlineUsers" id="online-users"></div>
+        </div>
+        <div class="chat-window">
+            <div class="chat-nav">
+                <div class="selected-user-info">
+                    <h3 id="selected-user-name">  </h3>
+                </div>
+                <div class="user-info">
+                    <h3 id="user-name"></h3>
+                </div>
+                <button onclick="toggleSidePanel()" class="toggle-button"><img src="menu.png" height="20px" width="20px"></button>
+                <button onclick="logOut()" class="logout-button">Log Out</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- <div class="message received">
+                    <img src="receiver_image.png" alt="User 1" class="user-image">
+                    <div class="bubble">Hello, how are you?</div>
+                </div>
+                <div class="message sent">
+                    <div class="bubble">I'm good, thank you!</div>
+                    <img src="sender_image.png" alt="User 2" class="user-image">
+                </div> -->
+                <!-- Add more messages as needed -->
+            </div>
+            <div class="chat-input" id="chat-input">
+                    <input type="text" placeholder="Type a message..." id="messageInput">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
